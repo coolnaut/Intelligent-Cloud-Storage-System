@@ -1,0 +1,3 @@
+convmv -f gbk -t utf8 -r --notest ./mroot/list/
+
+#notest如果是utf8则忽略

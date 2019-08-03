@@ -1,0 +1,27 @@
+客户端功能函数
+	
+	1、每次从文件中读取的备份信息保存在hash中
+	std::unordered_map<std::string, std::string> backup_list_;
+	
+	2、客户端每次启动时，读取配置文件中的备份信息
+	bool GetBackupInfo();
+	
+	3、监听备份目录
+	bool BackupDirListen(const std::string& pathname);
+
+		3.1文件是否需要备份
+		bool FileDateNeedBackup(const std::string& filename);))))))
+	
+		3.2如果需要备份，则上传文件/文件备份
+		bool PutFileData(const std::string& filename);
+
+			3.2.1获取单个文件etag，与backup_list_中的数据进行比较
+			std::string GetFileEtag(const std::string& filename);
+			
+		3.3备份成功则添加单个文件的etag
+		void AddFileBackInfo(const std::string& filename);
+		
+
+	4、刷新配置文件中的配置信息
+	bool TouchBackupInfo();
+

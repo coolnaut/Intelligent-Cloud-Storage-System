@@ -1,0 +1,2 @@
+gzip -c mroot/list/$1 > mroot/zip/$1.gz
+rm -rf mroot/list/$1
