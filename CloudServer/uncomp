@@ -1,2 +1,4 @@
+#!/bin/bash
+#文件解压缩shell脚本
 gunzip -c mroot/zip/$1.gz > ./mroot/list/$1
 rm -rf  mroot/zip/$1.gz
