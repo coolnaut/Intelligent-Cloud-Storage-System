@@ -1,3 +1,5 @@
+#!/bin/bash
+#文件名称编码格式转换shell脚本
 convmv -f gbk -t utf8 -r --notest ./mroot/list/
 
 #notest如果是utf8则忽略
