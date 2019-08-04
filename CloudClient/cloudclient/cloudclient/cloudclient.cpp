@@ -1,5 +1,8 @@
 #include"cloudclient.h"
 
+
+
+
 bool CloudClient::Run()
 {
 	GetBackupInfo();

@@ -1,6 +1,4 @@
 #include "cloudclient.h"
-
-
 int main()
 {
 	CloudClient c;
