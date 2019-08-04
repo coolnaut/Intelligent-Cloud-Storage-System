@@ -1,9 +1,4 @@
-/*░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
-▩ File Name: server.h
-▩ Author: top-down
-▩ Description: 
-▩ Created Time: 2019年07月15日 星期一 20时40分11秒
-░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░*/
+
 
 #include<iostream>
 #include<boost/filesystem.hpp>

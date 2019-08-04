@@ -1,9 +1,4 @@
-/*░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
-▩ File Name: server.cpp
-▩ Author: top-down
-▩ Description: 
-▩ Created Time: 2019年07月17日 星期三 12时44分17秒
-░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░*/
+
 
 #include "server.h"
 #include "compressserver.h"
