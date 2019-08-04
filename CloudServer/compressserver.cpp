@@ -1,10 +1,3 @@
-/*░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
-▩ File Name: compressserver.cpp
-▩ Author: top-down
-▩ Description: 
-▩ Created Time: 2019年07月22日 星期一 10时35分01秒
-░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░*/
-
 
 #include"compressserver.h"
 

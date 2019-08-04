@@ -1,9 +1,4 @@
-/*░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
-▩ File Name: compressserver.h
-▩ Author: top-down
-▩ Description: 
-▩ Created Time: 2019年07月22日 星期一 10时19分22秒
-░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░*/
+
 #pragma once
 #include<iostream>
 #include<unordered_map>
