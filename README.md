@@ -11,7 +11,7 @@
   openssl是OpenSSL-Win64
   boost是boost_1_70_0-msvc-14.1-64
  上述两个文件都是exe直接执行后会生成相应的库文件。相应配置见下图：
- 
+ ![环境配置](https://github.com/Be-doing/PrivateSmartCloudBackupSystem/blob/master/Irrelevant_picture/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE.png)
  2. 在cloudclient.h文件中声明了如下参数：
  ```
  #define BACKUP_PATH "back"		//文件监控与备份目录
