@@ -30,18 +30,18 @@
 ![](https://github.com/Be-doing/PrivateSmartCloudBackupSystem/blob/master/Irrelevant_picture/%E5%8E%8B%E7%BC%A9%E7%A8%8B%E5%BA%8F%E5%8F%82%E6%95%B0.png)
  ### 示例
  #### 客户端备份
- **首先是备份下目录的文件**
+ 首先是备份下目录的文件
  ![](https://github.com/Be-doing/PrivateSmartCloudBackupSystem/blob/master/Irrelevant_picture/backdir.png)
- **然后是客户端开始执行，对备份文件多线程上传**
+ 然后是客户端开始执行，对备份文件多线程上传
  ![](https://github.com/Be-doing/PrivateSmartCloudBackupSystem/blob/master/Irrelevant_picture/%E5%AE%A2%E6%88%B7%E7%AB%AF%E7%A4%BA%E4%BE%8B.png)
  #### 服务器程序
- **服务器程序运行之后，接收文件，并对低热度文件压缩**
+ 服务器程序运行之后，接收文件，并对低热度文件压缩
  ![](https://github.com/Be-doing/PrivateSmartCloudBackupSystem/blob/master/Irrelevant_picture/%E6%9C%8D%E5%8A%A1%E7%AB%AF%E7%A4%BA%E4%BE%8B.png)
  #### 浏览器访问
- **上传之后，可以浏览器访问**
+ 上传之后，可以浏览器访问
  ![](https://github.com/Be-doing/PrivateSmartCloudBackupSystem/blob/master/Irrelevant_picture/%E7%BD%91%E9%A1%B5%E7%A4%BA%E4%BE%8B.png)
- **点击文件名，执行下载功能**
+ 点击文件名，执行下载功能
  ![](https://github.com/Be-doing/PrivateSmartCloudBackupSystem/blob/master/Irrelevant_picture/%E6%96%87%E4%BB%B6%E4%B8%8B%E8%BD%BD%E7%A4%BA%E4%BE%8B.png)
  #### 服务器压缩服务
-**压缩目录下的文件**
+压缩目录下的文件
 ![](https://github.com/Be-doing/PrivateSmartCloudBackupSystem/blob/master/Irrelevant_picture/%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%8E%8B%E7%BC%A9%E7%9B%AE%E5%BD%95%E7%A4%BA%E4%BE%8B.png)
