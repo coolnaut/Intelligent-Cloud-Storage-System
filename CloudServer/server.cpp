@@ -64,28 +64,7 @@ void Server::GetFileData(const hb::Request& req, hb::Response& res)
 	//std::string body;
 	csr.DowanloadFile(file, res.body);
 	std::cout << file << " res.body.size=============" << res.body.size() << std::endl;
-	/*if(!bf::exists(file))
-	{
-		res.status = 404;
-		return;
-	}
-	std::ifstream inputfile(file,std::ios::binary);
-	if(!inputfile.is_open())
-	{
-		std::cout << "open error" << std::endl;
-		res.status = 500;
-		return;
-	}
-	std::string body;
-	int64_t filesize = bf::file_size(file);
-	body.resize(filesize);
-	inputfile.read(&body[0],filesize);
-	if(!inputfile.good())
-	{
-		std::cout << "load error" << std::endl;
-		res.status = 500;
-		return;
-	}*/
+	
 	res.set_header("Content-Length", std::to_string(res.body.size()).c_str());
 	res.set_header("Content-Type", "application/octet-stream");
 }
@@ -109,23 +88,6 @@ void Server::PutFileData(const hb::Request& req, hb::Response& res)
 	std::string realpath = SERVER_ROOT_PATH + req.path;	
 	
 	csr.SetFileData(realpath, req.body,range_bigin);
-
-	/*int fd = open(realpath.c_str(),O_CREAT|O_WRONLY,0664);
-	if(fd < 0)
-	{
-		std::cout << "open erroe" << std::endl;
-		res.status = 500;
-		return;
-	}
-	lseek(fd, range_bigin, SEEK_SET);
-	int ret = write(fd,&req.body[0],req.body.size());
-	if(ret != req.body.size())
-	{
-		std::cout << "write error" << std::endl;
-		res.status = 500;
-		return;
-	}
-	close(fd);*/
 	return ;
 }
 bool  Server::RangeParse(std::string& range, int64_t& begin)
