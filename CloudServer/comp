@@ -1,4 +1,4 @@
 #!/bin/bash
-#�ļ�ѹ��shell�ű�
-gzip -c mroot/list/$1 > mroot/zip/$1.gz
+#ÎÄ¼şÑ¹Ëõshell½Å±¾
+gzip -cf mroot/list/$1 > mroot/zip/$1.gz
 rm -rf mroot/list/$1
