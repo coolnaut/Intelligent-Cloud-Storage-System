@@ -6,29 +6,27 @@
 #include<sstream>
 #include<unordered_map>
 #include<boost/filesystem.hpp>
-#include<boost/algorithm/string.hpp>//×Ö·û´®ÇĞ¸î
+#include<boost/algorithm/string.hpp>//å­—ç¬¦ä¸²åˆ‡å‰²
 #include<thread>
 #include"httplib.h"
 
-#define BACKUP_PATH "back"		//ÎÄ¼ş¼à¿ØÓë±¸·İÄ¿Â¼
-#define BACKUP_INFO "backupinfo.txt"		//ÎÄ¼ş±¸·İĞÅÏ¢
+#define BACKUP_PATH "back"		//æ–‡ä»¶ç›‘æ§ä¸å¤‡ä»½ç›®å½•
+#define BACKUP_INFO "backupinfo.txt"		//æ–‡ä»¶å¤‡ä»½ä¿¡æ¯
 #define RANGE_MAX_SIZE (10<<20)
 #define SERVER_IP "192.168.138.135"
 #define SERVER_PORT 9090
 #define BACKUP_URI "/list/"
 namespace bf = boost::filesystem;
 namespace hb = httplib;
-//¹¦ÄÜ
-//»ñÈ¡ÎÄ¼ş±¸·İĞÅÏ¢
-//¼ì²âÄ¿Â¼ÖĞÎÄ¼şĞÅÏ¢
-//ÅĞ¶ÏÎÄ¼şÊÇ·ñĞèÒª±¸·İ
-		//mtime ÎÄ¼şĞŞ¸ÄÊ±¼ä Óë fsize ÎÄ¼ş´óĞ¡ ÊÇ·ñÓëÉÏ´ÎÏàÍ¬	
-//±¸·İÎÄ¼ş
-//¼ÇÂ¼ÎÄ¼ş±¸·İĞÅÏ¢¡ª¡ªetag = mtime + fsize
-		//mtime£ºÎÄ¼şĞŞ¸ÄÊ±¼ä
-		//fsize£ºÎÄ¼ş´óĞ¡
-
-
+//åŠŸèƒ½
+//è·å–æ–‡ä»¶å¤‡ä»½ä¿¡æ¯
+//æ£€æµ‹ç›®å½•ä¸­æ–‡ä»¶ä¿¡æ¯
+//åˆ¤æ–­æ–‡ä»¶æ˜¯å¦éœ€è¦å¤‡ä»½
+		//mtime æ–‡ä»¶ä¿®æ”¹æ—¶é—´ ä¸ fsize æ–‡ä»¶å¤§å° æ˜¯å¦ä¸ä¸Šæ¬¡ç›¸åŒ	
+//å¤‡ä»½æ–‡ä»¶
+//è®°å½•æ–‡ä»¶å¤‡ä»½ä¿¡æ¯â€”â€”etag = mtime + fsize
+		//mtimeï¼šæ–‡ä»¶ä¿®æ”¹æ—¶é—´
+		//fsizeï¼šæ–‡ä»¶å¤§å°
 
 class CloudClient
 {
@@ -36,21 +34,21 @@ public:
 	CloudClient();
 	bool Run();
 private:
-	//»ñÈ¡±¸·İĞÅÏ¢
+	//è·å–å¤‡ä»½ä¿¡æ¯
 	bool GetBackupInfo();
-	//Ë¢ĞÂ±¸·İĞÅÏ¢
+	//åˆ·æ–°å¤‡ä»½ä¿¡æ¯
 	bool TouchBackupInfo();
-	//¼àÌı±¸·İÄ¿Â¼
+	//ç›‘å¬å¤‡ä»½ç›®å½•
 	bool BackupDirListen(const std::string& pathname);
-	//ÉÏ´«ÎÄ¼ş/ÎÄ¼ş±¸·İ
+	//ä¸Šä¼ æ–‡ä»¶/æ–‡ä»¶å¤‡ä»½
 	bool PutFileData(const std::string& filename);
-		//Ìí¼Óµ¥¸öÎÄ¼şµÄetag
+		//æ·»åŠ å•ä¸ªæ–‡ä»¶çš„etag
 		void AddFileBackInfo(const std::string& filename);
-		//»ñÈ¡µ¥¸öÎÄ¼şetag
+		//è·å–å•ä¸ªæ–‡ä»¶etag
 		std::string GetFileEtag(const std::string& filename);
-	//ÎÄ¼şÊÇ·ñĞèÒª±¸·İ
+	//æ–‡ä»¶æ˜¯å¦éœ€è¦å¤‡ä»½
 	bool FileDateNeedBackup(const std::string& filename);
 private:
-	//±¸·İĞÅÏ¢
+	//å¤‡ä»½ä¿¡æ¯
 	std::unordered_map<std::string, std::string> backup_list_;
 };
