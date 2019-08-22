@@ -222,8 +222,7 @@ bool CompressServer::DirCheck()
 		}
 		std::string file = dit_begin->path().filename().string();
 		std::string path = dit_begin->path().string();
-		std::string cmd = "bash transname " + path;
-		popen(cmd.c_str(), "r");
+		AddFileConf(file, " ");
 		if(IsNeedCompress(path))
 		{
 			std::cout << file << " IsNeedCompress!" << std::endl;
