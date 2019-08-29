@@ -1,5 +1,5 @@
-# PrivateSmartCloudBackupSystem
-## ————私人智能云备份系统
+# Intelligent Cloud Storage System
+## ————智能云存储系统
 
 ### 简介
 本项目实现功能为：对本地备份文件检测，对于新文件或者修改的文件实现自动备份到私人服务器上，可以通过网页浏览服务器，进行下载。
