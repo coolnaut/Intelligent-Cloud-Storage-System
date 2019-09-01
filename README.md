@@ -45,3 +45,6 @@
  #### 服务器压缩服务
 压缩目录下的文件
 ![](https://github.com/Be-doing/PrivateSmartCloudBackupSystem/blob/master/Irrelevant_picture/%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%8E%8B%E7%BC%A9%E7%9B%AE%E5%BD%95%E7%A4%BA%E4%BE%8B.png)
+
+#### 注意
+在Windows环境下的客户端是在debug目录下的exe运行。
